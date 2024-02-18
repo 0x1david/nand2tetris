@@ -1,5 +1,12 @@
 |   a   |   b   |  out  |
 |   0   |   0   |   0   |
-|   0   |   1   |   1   |
-|   1   |   0   |   1   |
-|   1   |   1   |   1   |
+|   0   |   1   |   1   | --> Not(a) AND (b)
+|   1   |   0   |   1   | --> A AND NOT(b)
+|   1   |   1   |   1   | --> A AND B
+
+
+Not (a=a, out=notA);
+Not (b=b, out=notB);
+And (a=a, b=b, out=aAndB);
+Or (a=notA, b=notB, out=or1);
+Or (a=aAndB, b=or1, out=out)

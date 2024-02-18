@@ -12,5 +12,5 @@ CHIP Not {
     OUT out;
 
     PARTS:
-    //// Replace this comment with your code.
+    NAND (in=in, out=nand);
 }
